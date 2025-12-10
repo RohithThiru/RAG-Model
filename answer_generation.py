@@ -51,7 +51,5 @@ result = model.invoke(messages)
 
 
 print("\n--- Generated Response ---")
-# print("Full result:")
-# print(result)
 print("Content only:")
 print(result.content)
