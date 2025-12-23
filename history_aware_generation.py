@@ -3,10 +3,9 @@ from langchain_chroma import Chroma
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
-# Load environment variables
 load_dotenv()
 
-# Connect to your document database
+
 persistent_directory = "db/chroma_db"
 embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 db = Chroma(persist_directory=persistent_directory, embedding_function=embeddings)
